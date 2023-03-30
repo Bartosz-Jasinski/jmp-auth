@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class AboutController {
-	@GetMapping(path = "/about")
-	public String about() {
-		return "about";
+public class AdminController {
+	@GetMapping(path = "/admin")
+	public String admin() {
+		return "admin";
 	}
 }

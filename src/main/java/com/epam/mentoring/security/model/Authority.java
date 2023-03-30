@@ -30,4 +30,8 @@ public class Authority {
 		this.authority = authority;
 		this.user = user;
 	}
+
+	public String getAuthority() {
+		return authority;
+	}
 }

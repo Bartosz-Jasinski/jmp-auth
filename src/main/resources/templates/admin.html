@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>JMP - about</title>
+    <title>JMP - admin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 <body>
-<nav th:replace="index.html :: nav(activeTab='about')"></nav>
+<nav th:replace="index.html :: nav(activeTab='admin')"></nav>
 <div class="container">
     <div class="text-center mt-5">
         <h1>Java Mentoring Program</h1>
-        <p class="lead">GET /about endpoint, that is allowed for everyone!</p>
+        <p class="lead">GET /admin endpoint, that is allowed JUST for users with VIEW_ADMIN permission!</p>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
