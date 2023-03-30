@@ -15,12 +15,19 @@
 	<description>Authentication and Authorization mentoring task solution</description>
 	<properties>
 		<java.version>17</java.version>
+		<thymeleaf.extras.springsecurity6>3.1.1.RELEASE</thymeleaf.extras.springsecurity6>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+			<version>${thymeleaf.extras.springsecurity6}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

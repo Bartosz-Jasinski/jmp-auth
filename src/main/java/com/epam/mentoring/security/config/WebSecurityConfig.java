@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.thymeleaf.extras.springsecurity6.dialect.SpringSecurityDialect;
 
 import com.epam.mentoring.security.repository.UserRepository;
 
@@ -44,7 +45,22 @@ public class WebSecurityConfig {
 						.requestMatchers("/about").permitAll()
 						.anyRequest().authenticated()
 				)
-				.formLogin();
+				.formLogin()
+				.loginPage("/login")
+				.permitAll()
+				.defaultSuccessUrl("/index")
+				.failureUrl("/login?error")
+				.and()
+				.logout()
+				.clearAuthentication(true)
+				.invalidateHttpSession(true)
+				.logoutSuccessUrl("/login?logout")
+				.permitAll();
 		return http.build();
+	}
+
+	@Bean
+	public SpringSecurityDialect springSecurityDialect(){
+		return new SpringSecurityDialect();
 	}
 }
