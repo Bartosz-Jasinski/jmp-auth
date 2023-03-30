@@ -45,6 +45,10 @@ public class User {
 		return enabled;
 	}
 
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
 	public Set<Authority> getAuthorities() {
 		return authorities;
 	}
