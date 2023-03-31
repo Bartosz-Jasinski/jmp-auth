@@ -17,7 +17,7 @@
             <thead>
             <tr>
                 <th>Username</th>
-                <th>Is enabled?</th>
+                <th>Is disabled?</th>
             </tr>
             </thead>
             <tbody>
@@ -26,7 +26,7 @@
             </tr>
             <tr th:each="user : ${users}">
                 <td><span th:text="${user.getUsername()}">Username </span></td>
-                <td><span th:text="${user.enabled}">Is enabled? </span></td>
+                <td><span th:text="${!user.enabled}">Is disabled? </span></td>
             </tr>
             </tbody>
         </table>

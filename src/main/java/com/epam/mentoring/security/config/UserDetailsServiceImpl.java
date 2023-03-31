@@ -33,7 +33,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	}
 
 	private void validateAndUpdateUserBlockedStatus(User user) {
-		boolean isBlocked = loginAttemptService.isBlocked();
+		boolean isBlocked = loginAttemptService.isBlocked(user);
 		user.setEnabled(!isBlocked);
 
 		userRepository.save(user);
